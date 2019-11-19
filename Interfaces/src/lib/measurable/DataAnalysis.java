@@ -1,8 +1,10 @@
+package lib.measurable;
+
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class DataAnalysis<E extends Measurable> {
+public class DataAnalysis<E extends Measurable, Measurable> {
 
 	private List<E> objects;
 
