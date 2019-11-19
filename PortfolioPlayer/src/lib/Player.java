@@ -7,7 +7,7 @@ package lib;
  * @author TB/P2405416
  *
  */
-public class Player {
+public class Player implements Comparable<Player> {
 //
 	//Fields
 	private Name name;
