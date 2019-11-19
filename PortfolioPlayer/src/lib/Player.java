@@ -1,5 +1,7 @@
 package lib;
 
+import java.util.ArrayList;
+
 /**
  * A player will always have a name as well as a PairOfDice that they can throw simultaneously,
  * then retrieve the total score from their dice throw
@@ -8,7 +10,6 @@ package lib;
  *
  */
 public class Player implements Comparable<Player> {
-//
 	//Fields
 	private Name name;
     private Rollable dice;
@@ -109,8 +110,32 @@ public class Player implements Comparable<Player> {
 	
 	
 	@Override
+	/**
+	 * Formats the player class into a string showing the states of the Name and Dice of the player
+	 */
 	public String toString() {
 		return "Player:["  + name + dice + "]";
 	}
+
+	@Override
+	/**
+	 * Compare to method to implement the comparable interface into player.
+	 * Compares the current instance of the player's name and compares it to the family name
+	 * of the player passed by the user.
+	 * 
+	 * If the familyNames are the same then the two player's firstNames are compared.
+	 * @param other The player the user wants to compare with
+	 */
+	public int compareTo(Player other) {
+		int result = this.name.getFamilyName().compareTo(other.getName().getFamilyName());
+		
+		if (result == 0) {
+			result = this.name.getFirstName().compareTo(other.getName().getFirstName());
+		}
+		
+		return result;
+	}
+
+
 	
 }
