@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class DataAnalysis<E extends Measurable, Measurable> {
+public class DataAnalysis<E extends Measurable> {
 
 	private List<E> objects;
 
