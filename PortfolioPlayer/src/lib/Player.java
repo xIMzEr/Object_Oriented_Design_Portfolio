@@ -3,8 +3,8 @@ package lib;
 import java.util.ArrayList;
 
 /**
- * A player will always have a name as well as a PairOfDice that they can throw simultaneously,
- * then retrieve the total score from their dice throw
+ * A player will always have a Name as well as a Rollable type that they can throw simultaneously,
+ * then retrieve the total score from their dice throw.
  * 
  * @author TB/P2405416
  *
