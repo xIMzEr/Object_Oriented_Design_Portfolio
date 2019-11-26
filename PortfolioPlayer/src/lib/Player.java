@@ -84,7 +84,7 @@ public class Player implements Comparable<Player> {
     
 	//Methods
 	/**
-	 * Method that calls the Roll method in the PairOfDice class
+	 * Method that calls the Roll method in any of the rollable classes
 	 * for this instance of dice
 	 */
 	public void rollDice() {
