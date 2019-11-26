@@ -4,7 +4,9 @@ import java.util.ArrayList;
 
 /**
  * A player will always have a Name as well as a Rollable type that they can throw simultaneously,
- * then retrieve the total score from their dice throw.
+ * then retrieve the total score from their dice throw. The class contains methods for getting the Name of a 
+ * player and getting the player's Rollable type. The class can also roll the player's dice and return the total score
+ * of the dice/die. Furthermore the user can later set the player's name.
  * 
  * @author TB/P2405416
  *
@@ -112,6 +114,7 @@ public class Player implements Comparable<Player> {
 	@Override
 	/**
 	 * Formats the player class into a string showing the states of the Name and Dice of the player
+	 * @return Returns a Player object as a string
 	 */
 	public String toString() {
 		return "Player:["  + name + dice + "]";
