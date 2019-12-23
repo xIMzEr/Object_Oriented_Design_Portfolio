@@ -127,7 +127,10 @@ public class Player implements Comparable<Player> {
 	 * of the player passed by the user.
 	 * 
 	 * If the familyNames are the same then the two player's firstNames are compared.
-	 * @param other The player the user wants to compare with
+	 * @param other The player the user wants to compare with the current instance of Player
+	 * @return Returns 0 if the Player objects are the same; returns the difference of the two 
+	 * character values at position k in the two string or if there is no index position at which they differ
+	 * the compareTo returns the difference of the lengths of the strings .  
 	 */
 	public int compareTo(Player other) {
 		int result = this.name.getFamilyName().compareTo(other.getName().getFamilyName());

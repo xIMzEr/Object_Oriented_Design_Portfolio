@@ -14,11 +14,21 @@ public class Name implements Comparable<Name> {
 	
 	
 	//Constructors
+	/**
+	 * Default constructor that takes no arguements and populates the firstName and
+	 * familyName with empty fields
+	 */
 	public Name() {
 		firstName = "";
 		familyName = "";
 	}
 	
+	/**
+	 * Custom Constructor that populates the current instance of Name with a firstName and family name
+	 * passed by the user
+	 * @firstName The first name of the Name passed by the user
+	 * @familyName The last/family name of the Name passed by the user
+	 */
 	public Name(String firstName, String familyName) {
 		this.firstName = firstName;
 		this.familyName = familyName;
@@ -26,10 +36,20 @@ public class Name implements Comparable<Name> {
 
 	
 	//Methods
+	/**
+	 * Instantiates the firstName of the current user with the firstName passed
+	 * by the user
+	 * @firstName the first name of the current Name passed by the user
+	 */
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
 
+	/**
+	 * Instantiates the firstName of the current user with the firstName passed
+	 * by the user
+	 * @familyName the last/family name of the current Name passed by the user
+	 */
 	public void setFamilyName(String familyName) {
 		this.familyName = familyName;
 	}
