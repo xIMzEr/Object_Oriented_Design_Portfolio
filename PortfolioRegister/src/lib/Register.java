@@ -2,6 +2,7 @@ package lib;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Collections;
 
 /**
  * A register that contains the Names of people
@@ -131,6 +132,7 @@ public class Register implements Iterable<Name>{
 	 * this is then iterated multiple times until the whole list is sorted via size.
 	 */
 	public void sortRegister() {
+		//Manual bubble sort
 		boolean sorted = false;
 		while(!sorted) {	
 			sorted = true;
@@ -151,18 +153,29 @@ public class Register implements Iterable<Name>{
 				}
 			}
 		
-		}
+		} 
+		
+		//Alternative method
+		//this.register.sort(null);
 	}
 
 
 	
 	@Override
+	/**
+	 * Formats the Register object into a string displaying the states of the Register ArrayList.
+	 * @return Returns a Register object as a string
+	 */
 	public String toString() {
         return "Register:[Register=" + register + "]";
 		
 	}
 
 	@Override
+	/**
+	 * An Iterable interface method that delegates to theArrayList iterator()
+	 * @return An iterator over all of the elements from the ArrayList in register
+	 */
 	public Iterator<Name> iterator() {
 		return this.register.iterator();
 	}
