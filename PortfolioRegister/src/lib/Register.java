@@ -5,7 +5,12 @@ import java.util.Iterator;
 import java.util.Collections;
 
 /**
- * A register that contains the Names of people
+ * A register contains the names of one or more people in a class. An ArrayList containing the object Name stores the names of the people
+ * that are apart of the register. Names can be added, removed and returned from of a register, the size of the register can be returned as well as an
+ * empty check can be used. Furthermore you can count how many people are in the register that have the same first Name and search the register by their
+ * family name. The register can also be sorted if desired.
+ * 
+ * Since register contains a list of Name the relationship between both classes are Aggregation.
  * 
  * @author TB-P2405416
  */
@@ -128,35 +133,13 @@ public class Register implements Iterable<Name>{
 	}
 	
 	/**
-	 * Uses a bubble sort technique where the biggest Name in the register compared to each name in the register and moved to the end of the register,
-	 * this is then iterated multiple times until the whole list is sorted via size.
+	 * Using the imported lib Collections, the register can be sorted into ascending order by passing through the register as an arguement to
+	 * the sort operation in Collections.
 	 */
 	public void sortRegister() {
-		//Manual bubble sort
-		boolean sorted = false;
-		while(!sorted) {	
-			sorted = true;
-			for(int i = 0; i < registerSize(); i++){
-				Name swapName;
-				if (i < register.size() - 1) {
-					swapName = register.get(i+1);
-				} else {
-					swapName = register.get(i);
-				}
-				Name currentName = register.get(i);
-				
-				if(currentName.compareTo(swapName) > 0) {
-					int temp = register.indexOf(swapName);
-					this.register.set(i, swapName);
-					this.register.set(temp, currentName);
-					sorted = false;
-				}
-			}
-		
-		} 
-		
+
 		//Alternative method
-		//this.register.sort(null);
+        Collections.sort(register);
 	}
 
 
