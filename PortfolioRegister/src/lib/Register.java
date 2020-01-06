@@ -10,6 +10,8 @@ import java.util.Collections;
  * empty check can be used. Furthermore you can count how many people are in the register that have the same first Name and search the register by their
  * family name. The register can also be sorted if desired.
  * 
+ * When the register is instantiated no names via a pre-made ArrayList can be passed through with the creation of that register. 
+ * 
  * Since register contains a list of Name the relationship between both classes are Aggregation.
  * 
  * @author TB-P2405416
@@ -19,6 +21,9 @@ public class Register implements Iterable<Name>{
 	private ArrayList<Name> register;
 
 	//Constructors
+	/**
+	 * Default constructor that instantiates a new ArrayList called in register that contains empty elements. 
+	 */
 	public Register() {
 		register = new ArrayList<>();
 	}
