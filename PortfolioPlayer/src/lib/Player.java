@@ -110,17 +110,15 @@ public class Player implements Comparable<Player> {
        this.name = new Name(splitName[0], splitName[1]);
 	}
 	
-	
-	@Override
 	/**
 	 * Formats the player class into a string showing the states of the Name and Dice of the player
 	 * @return Returns a Player object as a string
 	 */
+	@Override
 	public String toString() {
 		return "Player:["  + name + dice + "]";
 	}
 
-	@Override
 	/**
 	 * Compare to method to implement the comparable interface into player.
 	 * Compares the current instance of the player's name and compares it to the family name
@@ -132,6 +130,7 @@ public class Player implements Comparable<Player> {
 	 * character values at position k in the two string or if there is no index position at which they differ
 	 * the compareTo returns the difference of the lengths of the strings .  
 	 */
+	@Override
 	public int compareTo(Player other) {
 		int result = this.name.getFamilyName().compareTo(other.getName().getFamilyName());
 		

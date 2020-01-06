@@ -150,22 +150,21 @@ public class Register implements Iterable<Name>{
 	}
 
 
-	
-	@Override
 	/**
 	 * Formats the Register object into a string displaying the states of the Register ArrayList.
 	 * @return Returns a Register object as a string
 	 */
+	@Override
 	public String toString() {
         return "Register:[Register=" + register + "]";
 		
 	}
-
-	@Override
+	
 	/**
 	 * An Iterable interface method that delegates to theArrayList iterator()
 	 * @return An iterator over all of the elements from the ArrayList in register
 	 */
+	@Override
 	public Iterator<Name> iterator() {
 		return this.register.iterator();
 	}
