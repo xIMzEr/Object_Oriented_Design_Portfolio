@@ -22,7 +22,9 @@ public class Register implements Iterable<Name>{
 
 	//Constructors
 	/**
-	 * Default constructor that instantiates a new ArrayList called in register that contains empty elements. 
+	 * Default constructor that instantiates a new ArrayList in register. 
+	 * 
+	 * register will currently be empty at this point and have an initial capacity of 10
 	 */
 	public Register() {
 		register = new ArrayList<>();
